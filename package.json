@@ -1,0 +1,32 @@
+{
+  "name": "places-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "serve": "./bin/www",
+    "test": "gulp && NODE_ENV=test mocha",
+    "test:auto": "NODE_ENV=test mocha -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "multer": "^1.3.0"
+  },
+  "devDependencies": {
+    "eslint-config-google": "^0.9.1",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^4.0.0",
+    "gulp-load-plugins": "^1.5.0",
+    "mocha": "^3.4.2",
+    "supertest": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=7.10"
+  },
+  "eslintConfig": {
+    "extends": "google"
+  },
+  "private": true
+}
