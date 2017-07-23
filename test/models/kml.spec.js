@@ -1,7 +1,9 @@
 const should = require('should');
-const DB = require('../../lib/db.js');
+const DB = require('../../lib/db');
 const fixtures = require('../fixtures/model-kml.json');
 const Kml = require('../../lib/models/kml');
+const sinon = require('sinon');
+require('should-sinon');
 
 describe('Model: kml', () => {
 
@@ -24,12 +26,16 @@ describe('Model: kml', () => {
   });
 
   it('create', (done) => {
-    Kml.create('The South', '9e4f2ec12009dab5702e3aff56621e81', (err, id) => {
-      Kml.all((err, kml) => {
-        kml.length.should.eql(3);
-        kml[2]._id.should.eql(id);
-        kml[2].name.should.eql('The South');
-        kml[2].path.should.eql('9e4f2ec12009dab5702e3aff56621e81');
+    Kml.create('The South', 'uploads/9e4f2ec12009dab5702e3aff56621e81', (err, kml) => {
+      kml.should.containEql({
+        name: 'The South',
+        path: 'uploads/9e4f2ec12009dab5702e3aff56621e81'
+      });
+      Kml.all((err, kmls) => {
+        kmls.length.should.eql(3);
+        kmls[2]._id.should.eql(kml._id);
+        kmls[2].name.should.eql('The South');
+        kmls[2].path.should.eql('uploads/9e4f2ec12009dab5702e3aff56621e81');
         done();
       })
     })
