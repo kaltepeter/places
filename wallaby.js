@@ -2,6 +2,7 @@ module.exports = function () {
   return {
     files: [
       'lib/**/*.js',
+      'lib/*.yml',
       'test/**/*',
       { pattern: 'test/**/*spec.js', ignore: true }
     ],
@@ -16,7 +17,10 @@ module.exports = function () {
 
     env: {
       type: 'node',
-      runner: 'node'
+      runner: 'node',
+      params: {
+        env: 'NODE_ENV=test'
+      }
     },
     testFramework: 'mocha'
   };

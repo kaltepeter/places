@@ -13,7 +13,7 @@ describe('Requests to the maps path', () => {
   let kmlFindBy = sinon.spy(Kml, 'findBy');
 
   before(done => {
-    DB.connect(DB.MODE_TEST, done);
+    DB.connect(done);
   });
 
   beforeEach(done => {

@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "serve": "./bin/www",
+    "serve": "./bin/www NODE_ENV=development",
     "test": "gulp && NODE_ENV=test mocha",
     "test:auto": "NODE_ENV=test mocha -w"
   },
@@ -28,6 +28,7 @@
     "gulp-eslint": "^4.0.0",
     "gulp-load-plugins": "^1.5.0",
     "mocha": "^3.4.2",
+    "node-yaml-config": "0.0.4",
     "should": "^11.2.1",
     "should-sinon": "0.0.5",
     "sinon": "^2.3.8",

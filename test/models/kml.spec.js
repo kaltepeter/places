@@ -8,7 +8,7 @@ require('should-sinon');
 describe('Model: kml', () => {
   let california;
   before(done => {
-    DB.connect(DB.MODE_TEST, done);
+    DB.connect(done);
   });
 
   beforeEach(done => {
