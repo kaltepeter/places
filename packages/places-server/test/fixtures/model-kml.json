@@ -1,0 +1,22 @@
+{
+  "collections": {
+    "kmls": [
+      {
+        "name": "Great Lakes.kml",
+        "path": "uploads/1fcdb168017a9e14b618ffbbefa58278"
+      },
+      {
+        "name": "California.kml",
+        "path": "uploads/a5bfba4788a89398d3be3603d7323d2b"
+      },
+      {
+        "name": "East Coast.kml",
+        "path": "uploads/a60e479c0dc0ba2935b22ca85e5ef83a"
+      },
+      {
+        "name": "West Coast.kml",
+        "path": "uploads/b9f6b287c4e4caac99fb7bec8c8f5646"
+      }
+    ]
+  }
+}

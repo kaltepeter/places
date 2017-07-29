@@ -1,0 +1,12 @@
+node_modules
+dist/
+.tmp
+app.yaml
+.idea
+
+uploads
+data
+
+npm-debug.log
+.DS_Store
+/*.env
