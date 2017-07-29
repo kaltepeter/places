@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "serve": "./bin/www NODE_ENV=development",
+    "start": "./bin/www",
     "test": "gulp && NODE_ENV=test mocha",
     "test:auto": "NODE_ENV=test mocha -w"
   },
