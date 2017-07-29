@@ -43,12 +43,12 @@ describe('Requests to the maps path', () => {
   it('returns a 201 status code for post', (done) => {
     request(app)
       .post('/maps')
-      .attach('map', 'test/Great Lakes.kmz')
+      .attach('map', 'test/Great_Lakes.kmz')
       .expect(201, (err, res) => {
         if (err) return done(err);
         res.body.id.should.be.String();
         res.body.id.length.should.be.greaterThan(1);
-        kmlCreate.should.be.calledWith('Great Lakes.kmz', sinon.match(uploadMatch));
+        kmlCreate.should.be.calledWith('Great_Lakes.kmz', sinon.match(uploadMatch));
         done();
       });
   });
